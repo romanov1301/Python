@@ -1,0 +1,42 @@
+class Cat:
+    total_number_in_the_ukraine = 0
+
+    def __init__(self, name="simba", colour="brown", weight=20, breed="Bengali", number_in_the_ukraine=300):
+        self.name = name
+        self.colour = colour
+        self.weight = weight
+        self.breed = breed
+        self.number_in_the_ukraine = number_in_the_ukraine
+        Cat.total_number_in_the_ukraine +=number_in_the_ukraine
+
+    def to_string(self):
+         print("Name - "+ self.name + ", Colour - ", self.colour,",Weight - ",self.weight,",Breed - " ,
+         self.breed,
+         ", Number_in_the_ukraine - " , self.number_in_the_ukraine)
+
+    def print_sum(self):
+         print("number_in_the_ukraine - " + self.name, self.number_in_the_ukraine)
+
+    @staticmethod
+    def print_static_sum():
+         print("number_in_the_ukraine", Cat.total_number_in_the_ukraine)
+
+
+if __name__ == '__main__':
+    print("\n**************************\n")
+    simba = Cat()
+    vyslouchi = Cat("Cat","white",15,"Germani")
+    tiger = Cat("Cat","red",120,"Africa", 200)
+
+    simba.to_string()
+    vyslouchi.to_string()
+    tiger.to_string()
+
+    print("\n**************************\n")
+    simba.print_sum()
+    vyslouchi.print_sum()
+    tiger.print_sum()
+
+    print("\n**************************\n")
+    Cat.print_static_sum()
+    print("\n**************************\n")
